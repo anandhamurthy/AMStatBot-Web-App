@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AMStatBot</title>
+
+		<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+			integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+		<div class="header">
+			<nav>
+				<div class="img">
+					<img src="img/icon_black.png" alt="" />
+					<h1>AMStatBot</h1>
+				</div>
+				<div class="nav-links">
+					<ul>
+						<li>
+							<a onclick="logout()" href=""
+								><i class="fas fa-sign-out-alt"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<section class="chat">
+			<div class="list-group" id="lstgrp"></div>
+
+			<!-- <div class="chat-loading">
+				<div class="dot-typing"></div>
+			</div> -->
+
+			<!-- <div class="chat-message">
+				<div class="chat-item-left">
+					<p class="message">Hi there, how can I help?</p>
+					<p class="time">1.30 PM</p>
+				</div>
+
+				<div class="chat-item-right">
+					<p class="message">Hi there, how can I help?</p>
+					<p class="time">1.30 PM</p>
+				</div>
+			</div> -->
+
+			<!-- <div class="chat-item-stock-right">
+				<div class="stock-head">
+					<div class="stock-name-sym">
+						<p class="stock-name">Apple Inc</p>
+						<p class="stock-sym">(AAPL)</p>
+					</div>
+
+					<div class="follow">
+						<p class="follow-count">0 Follow</p>
+						<i class="fas fa-plus-square"></i>
+					</div>
+				</div>
+				<hr />
+				<div class="stock-body-one">
+					<div class="stock-item">
+						<img src="img/close.png" alt="" width="30" />
+						<p>Close</p>
+						<p>215.3</p>
+					</div>
+
+					<div class="stock-item">
+						<img src="img/percent_negative.png" alt="" width="30" />
+						<p>Percentage</p>
+						<p>215.3</p>
+					</div>
+
+					<div class="stock-item">
+						<img src="img/high.png" alt="" width="30" />
+						<p>High</p>
+						<p>215.3</p>
+					</div>
+				</div>
+				<div class="stock-body-two">
+					<div class="stock-item">
+						<img src="img/low.png" alt="" width="30" />
+						<p>Low</p>
+						<p>215.3</p>
+					</div>
+
+					<div class="stock-item">
+						<img src="img/open.png" alt="" width="30" />
+						<p>Open</p>
+						<p>215.3</p>
+					</div>
+
+					<div class="stock-item">
+						<img src="img/volume.png" alt="" width="30" />
+						<p>Volume</p>
+						<p>215.3</p>
+					</div>
+				</div>
+				<hr />
+				<div class="stock-tail">
+					<p class="time">1.30 PM</p>
+				</div>
+			</div> -->
+		</section>
+
+		<section class="chat-box">
+			<input
+				class="message"
+				type="text"
+				name="message"
+				id="message"
+				placeholder="Ask AMStatBot.."
+			/>
+			<div class="send">
+				<img src="img/ask.png" alt="" onclick="getMessage()" />
+			</div>
+		</section>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+		<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+		<script src="index.js"></script>
+	</body>
+</html>

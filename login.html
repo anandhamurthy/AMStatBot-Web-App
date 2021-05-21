@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AMStatBot | Login</title>
+
+		<link rel="stylesheet" href="login.css" />
+		<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+	</head>
+	<body>
+		<section class="form">
+			<div class="login-form">
+				<h2>LOGIN</h2>
+				<input
+					type="text"
+					name="phone"
+					id="phone_number"
+					placeholder="Phone Number"
+				/>
+				<input type="text" name="pin" id="pin" placeholder="OTP Pin" />
+				<div
+					id="recaptcha-container"
+					class="recaptcha-container"
+					style="margin-bottom: 10px"
+				></div>
+
+				<button id="sign-in-btn" onclick="signIn()" class="sign-in">
+					Sign in
+				</button>
+				<button id="verify-btn" onclick="verify()" class="verify">
+					Verify
+				</button>
+			</div>
+		</section>
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+		<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+		<script src="login.js"></script>
+	</body>
+</html>

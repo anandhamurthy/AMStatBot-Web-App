@@ -15,13 +15,13 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-firebase.auth().onAuthStateChanged((user) => {
-	if (user) {
-		window.location = "index.html";
-	} else {
-		window.location = "login.html";
-	}
-});
+// firebase.auth().onAuthStateChanged((user) => {
+// 	if (user) {
+// 		window.location = "index.html";
+// 	} else {
+// 		window.location = "login.html";
+// 	}
+// });
 
 function render() {
 	window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(

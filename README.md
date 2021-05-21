@@ -16,4 +16,5 @@ https://github.com/anandhamurthy/StockNews-API
 ### Graph API Repository
 https://github.com/anandhamurthy/Stock-Graph-API
 
-![AMStatBot](https://github.com/anandhamurthy/AMStatBot/blob/master/amstatbot.png)
+![AMStatBot](https://github.com/anandhamurthy/AMStatBot-Web-App/blob/main/screenshots/ss1.png)
+![AMStatBot](https://github.com/anandhamurthy/AMStatBot-Web-App/blob/main/screenshots/ss2.png)

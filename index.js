@@ -24,7 +24,6 @@ firebase.auth().onAuthStateChanged((user) => {
 		var fb_ref = firebase.database().ref().child("chats").child(userId);
 		fb_ref.on("child_added", (snap) => {
 			if (snap.exists()) {
-				console.log(snap.val());
 				element = snap.val();
 				if (element.id == 1) {
 					listgrp.innerHTML += `<div class="chat-item-right">
@@ -108,7 +107,6 @@ firebase.auth().onAuthStateChanged((user) => {
 		});
 	} else {
 		window.location = "login.html";
-		console.log("no user");
 	}
 });
 
@@ -117,7 +115,6 @@ function logout() {
 		.auth()
 		.signOut()
 		.then(() => {
-			console.log("logged out");
 			window.location = "login.html";
 		})
 		.catch((error) => {

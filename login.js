@@ -15,6 +15,14 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+firebase.auth().onAuthStateChanged((user) => {
+	if (user) {
+		window.location = "index.html";
+	} else {
+		window.location = "login.html";
+	}
+});
+
 function render() {
 	window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
 		"recaptcha-container"
@@ -32,7 +40,6 @@ function verify() {
 		.then(function (confirmationResult) {
 			window.confirmationResult = confirmationResult;
 			coderesult = confirmationResult;
-			console.log(coderesult + "Message Sent");
 			document.getElementById("pin").style.visibility = "visible";
 			document.getElementById("sign-in-btn").style.visibility = "visible";
 			document.getElementById("verify-btn").style.visibility = "hidden";
@@ -49,7 +56,6 @@ function signIn() {
 	coderesult
 		.confirm(code)
 		.then(function (result) {
-			console.log("registered");
 			window.location = "index.html";
 		})
 		.catch(function (error) {

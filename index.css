@@ -222,7 +222,16 @@ body {
     font-size: 20px;
 }
 
-.chat-item-stock-right .stock-head .follow img {
+.chat-item-stock-right .stock-head .graph {
+    margin-right: 10px;
+    align-self: flex-end;
+    align-items: center;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-item-stock-right .stock-head .graph img {
     text-align: end;
     margin-right: 10px;
 }
